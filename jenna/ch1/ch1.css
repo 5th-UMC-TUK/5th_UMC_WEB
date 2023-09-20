@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+}
+.bg{
+ 
+  background: url("./img/UMC\ 뭔가\ 간지나는\ 배경1\ 2.svg") no-repeat center ;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login_wrap{
+  background-color:rgba(253, 253, 253, 0.5);
+  width: 800px;
+  height: 450px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+h1{
+  margin-bottom: 10px;
+  font-size: 50px;
+}
+.line{
+  margin-bottom: 50px;
+  width:50%;
+  border:0 ;
+  height: 1px;
+  background-color: #dcdcdc;
+}
+.login_form{
+  display: flex;
+  flex-direction: column;
+}
+.login_form > input{
+
+  height: 27px;
+  margin-bottom: 20px;
+  width: 200px;
+  background-color: transparent;
+  border-width: 0 0 1px;
+  border-color:#dcdcdc ;
+
+}
+.login_form > input::placeholder{
+  color: #dcdcdc;
+}
+.login_form > input[type="submit"]{
+  color: #dcdcdc;
+  font-size: 16px;
+  background-color: #313131;
+  margin-top: 20px;
+  border-radius: 7px;
+  height: 40px;
+  margin-bottom: 50px;
+}
+.links{
+  display: flex;
+  align-items: center;
+
+  justify-content: space-around;
+  width: 190px;
+
+}
+
+.links > hr{
+  height:13px;
+  width: 1px;
+  border: 0;
+  background-color: #313131;
+}
+
+a{
+  text-decoration-line: none;
+  font-size: 13px;
+  color: #313131;
+}
