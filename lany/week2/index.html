@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">회원 가입</h1>
+      <div class="container_inner">
+        <label
+          >이름
+          <input type="text" class="input_name" />
+          <div class="name_validation">필수 입력 항목입니다!</div>
+        </label>
+        <label
+          >닉네임
+          <input type="text" class="input_nickname" />
+          <div class="nickname_validation">닉네임은 2 ~ 5글자로 구성해주세요!</div>
+        </label>
+        <label
+          >이메일
+          <input type="email" class="input_email" />
+          <div class="email_validation">올바른 메일 형식이 아닙니다!</div>
+        </label>
+        <label
+          >비밀번호
+          <input type="password" class="input_password" />
+          <div class="password_validation">영어+숫자+특수문자를 조합하여 작성해주세요.</div>
+        </label>
+        <label
+          >비밀번호 확인
+          <input type="password" class="input_password_confirm" />
+          <div class="password_confirm_validation">비밀번호가 일치하지 않습니다.</div>
+        </label>
+        <button disabled class="btn_signup">가입하기</button>
+      </div>
+    </div>
+    <div class="modal_container">
+      <div class="modal">
+        <h2>가입 성공!</h2>
+        <p>umc 챌린저 가입을 축하합니다!!</p>
+        <button class="btn_close">닫기</button>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
