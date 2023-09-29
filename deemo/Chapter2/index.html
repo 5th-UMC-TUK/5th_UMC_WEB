@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <form class="loginBoxs" action="">
+      <h1 class="title">회원 가입</h1>
+
+      <div class="form-group">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" required>
+        <div class="message" id="nameMessage"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="nickname">닉네임</label>
+        <input type="text" id="nickname" name="nickname" required>
+        <div class="message" id="nicknameMessage"></div>
+      </div>
+      <div class="form-group">
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email" required>
+        <div class="message" id="emailMessage"></div>
+      </div>
+      <div class="form-group">
+        <label for="password">비밀번호</label>
+        <input type="password" id="password" name="password" required>
+        <div class="message" id="passwordMessage"></div>
+      </div>
+      <div class="form-group">
+        <label for="confirmation">비밀번호 확인</label>
+        <input type="password" id="confirmation" name="confirmation" required>
+        <div class="message" id="confirmationMessage"></div>
+      </div>
+      <button id="success" type="submit">가입하기</button>
+    </form>
+  </div>
+  <div class="modal-wrapper">
+    <div class="modal">
+      <h2 class="modal-title">가입 성공!</h2>
+      <p>UMC 챌린저 가입을 축하합니다!!</p>
+      <div class="close-wrapper">
+        <button id="close">닫기</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  const name = document.querySelector("#name");
+  const nickname = document.querySelector("#nickname");
+  const email = document.querySelector("#email");
+  const password = document.querySelector("#password");
+  const confirmation = document.querySelector("#confirmation");
+
+  function isValidEmail(inputEmail) {
+    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return regex.test(inputEmail);
+  }
+
+  function isValidPassword(inputPassword) {
+    const regex = /^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9]).{8,}$/;
+    return regex.test(inputPassword);
+  }
+
+  function showMessage(input, message, isSuccess) {
+    const messageDiv = document.getElementById(input.id + 'Message');
+    messageDiv.textContent = message;
+
+    if (isSuccess) {
+      messageDiv.classList.remove('error');
+      messageDiv.classList.add('success');
+    } else {
+      messageDiv.classList.remove('success');
+      messageDiv.classList.add('error');
+    }
+  }
+
+  const success = document.getElementById("success");
+  const close = document.getElementById("close");
+  const modal = document.querySelector(".modal-wrapper");
+
+  success.onclick = (e) => {
+    e.preventDefault();
+
+    let isFormValid = true;
+
+    if (!name.value.trim()) {
+      showMessage(name, '이름을 입력하세요.', false);
+      isFormValid = false;
+    } else {
+      showMessage(name, '완벽해요!', true);
+    }
+
+    if (nickname.value.length < 2 || nickname.value.length > 5) {
+      showMessage(nickname, '닉네임은 2 ~ 5글자로 구성해주세요!', false);
+      isFormValid = false;
+    } else {
+      showMessage(nickname, '좋아요!', true);
+    }
+
+    if (!isValidEmail(email.value)) {
+      showMessage(email, '올바른 이메일 형식이 아닙니다.', false);
+      isFormValid = false;
+    } else {
+      showMessage(email, '멋진 이메일이에요!', true);
+    }
+
+    if (!isValidPassword(password.value)) {
+      showMessage(password, '영어+숫자+특수문자를 조합하여 작성해주세요.', false);
+      isFormValid = false;
+    } else {
+      showMessage(password, '안전해보여요!', true);
+    }
+
+    if (password.value !== confirmation.value) {
+      showMessage(confirmation, '비밀번호가 일치하지 않습니다.', false);
+      isFormValid = false;
+    } else {
+      showMessage(confirmation, '일치해요!', true);
+    }
+
+    if (isFormValid) {
+      modal.style.display = "flex";
+    }
+  };
+
+  close.onclick = () => {
+    modal.style.display = "none";
+  };
+
+
+</script>
+
+</html>

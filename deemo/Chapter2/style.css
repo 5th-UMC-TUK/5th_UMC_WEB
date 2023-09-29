@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("img/UMC_뭔가_간지나는_배경1_2.svg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.loginBoxs {
+    width: 700px;
+    height: 700px;
+    background-color: #8792a8da;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 38px;
+}
+.form-group {
+    margin-bottom: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title {
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px white solid;
+    margin-bottom: 36px;
+    font-size: 46px;
+    width: 320px;
+    height: 60px;
+}
+
+.loginBoxs label {
+    text-align: left;
+    font-size: 12px;
+    color: white;
+}
+
+.loginBoxs input {
+    display: block;
+    margin: 10px auto;
+    font-size: 16px;
+    width: 220px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 0 10px;
+}
+
+input::placeholder {
+    color: white;
+}
+
+.loginBoxs button {
+    width: 220px;
+    height: 60px;
+    font-size: 24px;
+    margin-top: 24px;
+    border-radius: 15px;
+    background-color: rgb(77, 75, 75);
+    color: white;
+}
+
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background: white;
+    padding: 24px 16px;
+    border-radius: 4px;
+    width: 320px;
+    text-align: center;
+    border-radius: 15px;
+
+}
+
+
+.modal-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.modal p {
+    font-size: 16px;
+}
+
+.close-wrapper {
+    text-align: right;
+}
+
+.message {
+    height: 5px;
+    font-size: 12px;
+}
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
