@@ -1,0 +1,115 @@
+body {
+  height: 100vh;
+  background-image: url("./img/image.svg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#join-form {
+  background-color: rgba(146, 149, 160, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 650px;
+  height: 550px;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  border-bottom: 0.5px solid white;
+  padding-bottom: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  color: rgb(200, 200, 200);
+  font-weight: 300;
+  width: 230px;
+}
+
+input {
+  height: 25px;
+  border-radius: 5px;
+  border: 0.5px solid white;
+  margin-top: 5px;
+  background: transparent;
+  color: white;
+  margin-bottom: 3px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.message {
+  font-weight: 500;
+}
+
+.error {
+  color: #cb595d;
+}
+
+.success {
+  color: #6fb583;
+}
+
+#join_btn {
+  width: 230px;
+  height: 40px;
+  border-radius: 7px;
+  border: none;
+  background-color: rgb(100, 100, 100);
+  color: white;
+  font-size: 15px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+#modal {
+  background-color: white;
+  width: 360px;
+  height: 150px;
+  border-radius: 25px;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+}
+
+#modal_title {
+  margin-top: 30px;
+  font-size: 25px;
+}
+
+#modal_text {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+#modal_btn {
+  background: inherit;
+  border: 1px solid rgb(182, 180, 180);
+  width: 47px;
+  height: 23px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-left: 220px;
+}
