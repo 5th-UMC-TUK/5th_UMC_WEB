@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+}
+.bg{
+ 
+  background: url("../img/UMC\ 뭔가\ 간지나는\ 배경1\ 2.svg") no-repeat center ;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login_wrap{
+  background-color:rgba(253, 253, 253, 0.5);
+  width: 800px;
+  height: 700px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+}
+h1{
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+.line{
+  margin-bottom: 30px;
+  width:50%;
+  border:0 ;
+  height: 1px;
+  background-color: #dcdcdc;
+}
+.login_form{
+  display: flex;
+  flex-direction: column;
+}
+.login_form > input {
+
+  height: 27px;
+  margin-bottom: 3px;
+  width: 240px;
+  background-color:rgba(255, 255, 255, 0.2);
+  border : 1px solid #dcdcdc;
+  border-radius: 8px;
+
+}
+input:focus {outline:none;}
+.login_form > label{
+
+ color: #fff;
+
+}
+.login_form > input[type="submit"]{
+  color: #e0e0e9;
+  font-size: 16px;
+  background-color: #b2b2b2;
+  margin-top: 20px;
+  border : 0px ;
+  height: 40px;
+  margin-bottom: 50px;
+}
+.links{
+  display: flex;
+  align-items: center;
+
+  justify-content: space-around;
+  width: 190px;
+
+}
+
+.links > hr{
+  height:13px;
+  width: 1px;
+  border: 0;
+  background-color: #313131;
+}
+
+a{
+  text-decoration-line: none;
+  font-size: 13px;
+  color: #313131;
+}
+
+.modal_wrapper {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal{
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: white;
+  padding: 24px 16px;
+  border-radius: 15px;
+  width: 350px;
+  height: 100px;
+
+
+}
+
+.modal_title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 16px;
+}
+
+#close{
+  position: absolute;
+  bottom:20px;
+  right: 20px;
+  background-color: #fff;
+  border: solid transparent;
+  border-radius: 7px;
+  box-shadow: 0px 0px 11px 0px #7a7a7a;
+}
+
+h3{
+  
+  margin-bottom: 15px;
+  font-size: 10px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./ch2.css">
+</head>
+<body>
+  
+  <div class="bg">
+   
+    <div class="login_wrap">
+      <h1>회원가입</h1>
+      <hr class="line">
+      <form class="login_form">
+        <label for="userid">이름</label>
+        <input type="text" name="id" id ="userid">
+        <h3 class="idError"></h3>
+        <label for="nickname">닉네임</label>
+        <input  type="text" name="nickname"  id ="nickname">
+        <h3 class="nicknameError"></h3>
+        <label for="email">이메일</label>
+        <input type="email" name="email" id ="email">
+        <h3 class="emailError"></h3>
+        <label for="pwd">비밀번호</label>
+        <input type="password" name="pwd" id ="pwd">
+        <h3 class="pwdError"></h3>
+        <label for="repwd">비밀버호 확인</label>
+        <input type="password" name="repwd" id ="repwd">
+        <h3 class="repwdError"></h3>
+        <input disabled type="submit"  value="가입하기" id ="btn">
+      </form>
+    </div>
+    <div class ="modal_wrapper"  >
+      <div class="modal">
+      <div class="modal_title">가입 성공!</div>
+      <p>umc 챌린저 가입을 축하합니다!!</p>
+      <button id="close">닫기</button>
+    </div>
+  </div>
+  </div>
+  <script src="./ch2.js"></script>
+</body>
+</html>
