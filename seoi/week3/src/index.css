@@ -1,0 +1,27 @@
+body {
+  background-color: rgb(35, 37, 75);
+}
+
+.app-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 30px;
+  place-items: center;
+}
+
+.movie_img {
+  width: 200px;
+  height: 300px;
+}
+
+.movie_info {
+  width: 200px;
+  height: 70px;
+  background-color: #373b69;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
