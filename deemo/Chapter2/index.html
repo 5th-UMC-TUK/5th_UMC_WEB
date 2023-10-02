@@ -39,7 +39,7 @@
         <input type="password" id="confirmation" name="confirmation" required>
         <div class="message" id="confirmationMessage"></div>
       </div>
-      <button id="success" type="submit">가입하기</button>
+      <button id="success" type="submit" disabled>가입하기</button>
     </form>
   </div>
   <div class="modal-wrapper">
@@ -86,55 +86,43 @@
   const close = document.getElementById("close");
   const modal = document.querySelector(".modal-wrapper");
 
-  success.onclick = (e) => {
-    e.preventDefault();
+  function checkFormValidity() {
+    const allInputsValid =
+      name.value.trim() &&
+      (nickname.value.length >= 2 && nickname.value.length <= 5) &&
+      isValidEmail(email.value) &&
+      isValidPassword(password.value) &&
+      password.value === confirmation.value;
 
-    let isFormValid = true;
+    success.disabled = !allInputsValid;
+  }
+  name.addEventListener('input', () => {
+    showMessage(name, name.value.trim() ? '완벽해요!' : '이름을 입력하세요.', name.value.trim());
+    checkFormValidity();
+  });
+  nickname.addEventListener('input', () => {
+    showMessage(nickname, (nickname.value.length >= 2 && nickname.value.length <= 5) ? '좋아요!' : '닉네임은 2 ~ 5글자로 구성해주세요!', (nickname.value.length >= 2 && nickname.value.length <= 5));
+    checkFormValidity();
+  });
+  email.addEventListener('input', () => {
+    showMessage(email, isValidEmail(email.value) ? '멋진 이메일이에요!' : '올바른 이메일 형식이 아닙니다.', isValidEmail(email.value));
+    checkFormValidity();
+  });
+  password.addEventListener('input', () => {
+    showMessage(password, isValidPassword(password.value) ? '안전해보여요!' : '영어+숫자+특수문자를 조합하여 작성해주세요.', isValidPassword(password.value));
+    checkFormValidity();
+  });
+  confirmation.addEventListener('input', () => {
+    showMessage(confirmation, password.value === confirmation.value ? '일치해요!' : '비밀번호가 일치하지 않습니다.', password.value === confirmation.value);
+    checkFormValidity();
+  });
 
-    if (!name.value.trim()) {
-      showMessage(name, '이름을 입력하세요.', false);
-      isFormValid = false;
-    } else {
-      showMessage(name, '완벽해요!', true);
-    }
-
-    if (nickname.value.length < 2 || nickname.value.length > 5) {
-      showMessage(nickname, '닉네임은 2 ~ 5글자로 구성해주세요!', false);
-      isFormValid = false;
-    } else {
-      showMessage(nickname, '좋아요!', true);
-    }
-
-    if (!isValidEmail(email.value)) {
-      showMessage(email, '올바른 이메일 형식이 아닙니다.', false);
-      isFormValid = false;
-    } else {
-      showMessage(email, '멋진 이메일이에요!', true);
-    }
-
-    if (!isValidPassword(password.value)) {
-      showMessage(password, '영어+숫자+특수문자를 조합하여 작성해주세요.', false);
-      isFormValid = false;
-    } else {
-      showMessage(password, '안전해보여요!', true);
-    }
-
-    if (password.value !== confirmation.value) {
-      showMessage(confirmation, '비밀번호가 일치하지 않습니다.', false);
-      isFormValid = false;
-    } else {
-      showMessage(confirmation, '일치해요!', true);
-    }
-
-    if (isFormValid) {
-      modal.style.display = "flex";
-    }
-  };
 
   close.onclick = () => {
     modal.style.display = "none";
   };
 
+checkFormValidity();
 
 </script>
 
