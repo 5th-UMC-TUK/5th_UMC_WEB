@@ -11,15 +11,37 @@
 }
 
 .movie_img {
-  width: 250px;
-  height: 375px;
+  width: 300px;
+  height: 450px;
 }
 
 .movie_title_average {
   display: flex;
   justify-content: space-between;
-  width: 210px;
+  width: inherit;
   padding: 20px;
   color: rgb(255, 255, 255);
   background-color: rgb(56, 59, 102);
+}
+
+.movie_detail_wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie_detail {
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  height: 100%;
+  color: rgb(255, 255, 255);
+  padding: 0px 10px;
+  transition: opacity 0.5s;
+}
+
+.movie_detail_wrap:hover {
+  .movie_detail {
+    opacity: 1;
+  }
 }
