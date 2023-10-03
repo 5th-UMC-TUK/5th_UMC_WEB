@@ -22,6 +22,26 @@ let emailCheck = false;
 let passwordCheck = false;
 let passwordConfirmCheck = false;
 
+const allcheck = () => {
+  if (
+    nameCheck &&
+    nicknameCheck &&
+    emailCheck &&
+    passwordCheck &&
+    passwordConfirmCheck
+  ) {
+    joinBtn.style.backgroundColor = "rgb(100, 100, 100)";
+    joinBtn.style.cursor = "pointer";
+
+    joinBtn.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+    });
+  }
+};
+
 nameInput.addEventListener("keyup", () => {
   const nameValue = nameInput.value;
 
@@ -35,6 +55,7 @@ nameInput.addEventListener("keyup", () => {
     nameValidation.classList.remove("error");
     nameValidation.classList.add("success");
     nameCheck = true;
+    allcheck();
   }
 });
 
@@ -46,6 +67,7 @@ nicknameInput.addEventListener("keyup", () => {
     nicknameValication.classList.remove("error");
     nicknameValication.classList.add("success");
     nicknameCheck = true;
+    allcheck();
   } else {
     nicknameValication.innerText = "닉네임은 2~5글자로 구성해주세요!";
     nicknameValication.classList.remove("success");
@@ -66,6 +88,7 @@ emailInput.addEventListener("keyup", () => {
     emailValidation.classList.remove("error");
     emailValidation.classList.add("success");
     emailCheck = true;
+    allcheck();
   } else {
     emailValidation.innerText = "올바른 메일 형식이 아닙니다!";
     emailValidation.classList.remove("success");
@@ -86,6 +109,7 @@ passwordInput.addEventListener("keyup", () => {
     passwordValidation.classList.remove("error");
     passwordValidation.classList.add("success");
     passwordCheck = true;
+    allcheck();
   } else {
     passwordValidation.innerText =
       "영어+숫자+특수문자를 조합하여 작성해주세요.";
@@ -104,26 +128,12 @@ passwordConfirmInput.addEventListener("keyup", () => {
     passwordConfirmValidation.classList.remove("error");
     passwordConfirmValidation.classList.add("success");
     passwordConfirmCheck = true;
+    allcheck();
   } else {
     passwordConfirmValidation.innerText = "비밀번호가 일치하지 않습니다.";
     passwordConfirmValidation.classList.remove("success");
     passwordConfirmValidation.classList.add("error");
     passwordConfirmCheck = false;
-  }
-});
-
-joinBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-
-  if (
-    nameCheck &&
-    nicknameCheck &&
-    emailCheck &&
-    passwordCheck &&
-    passwordConfirmCheck
-  ) {
-    modal.classList.remove("hidden");
-    modal.classList.add("flex");
   }
 });
 
