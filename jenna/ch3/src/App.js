@@ -11,6 +11,7 @@ function App() {
             poster={item.backdrop_path}
             title={item.title}
             vote={item.vote_average}
+            overview={item.overview}
           />
         );
       })}
