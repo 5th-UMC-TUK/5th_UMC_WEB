@@ -1,16 +1,18 @@
+import * as S from "./Movie.style";
+
 function Movie({ bgImage, title, vote, overview }) {
   return (
-    <div className="movie-container">
+    <S.movieContainer>
       <img className="movie_img" src={bgImage} />
-      <div className="movie_info">
+      <S.movieInfo>
         <span>{title}</span>
         <span>{vote}</span>
-      </div>
-      <div className="detail-container">
+      </S.movieInfo>
+      <S.detailContainer>
         <h5>{title}</h5>
-        <p>{overview}</p>
-      </div>
-    </div>
+        <S.overview>{overview}</S.overview>
+      </S.detailContainer>
+    </S.movieContainer>
   );
 }
 
