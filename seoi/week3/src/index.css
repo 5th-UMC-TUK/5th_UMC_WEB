@@ -25,3 +25,33 @@ body {
   padding: 0 10px;
   box-sizing: border-box;
 }
+
+.movie-container {
+  position: relative;
+}
+
+.detail-container {
+  visibility: hidden;
+  color: rgb(179, 179, 179);
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.movie-container:hover .detail-container {
+  visibility: visible;
+}
+
+.detail-container p {
+  font-size: 13px;
+  line-height: 1.5;
+  height: 80%;
+  overflow-y: scroll;
+}
+
+.detail-container p::-webkit-scrollbar {
+  display: none;
+}

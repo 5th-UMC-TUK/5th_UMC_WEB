@@ -1,10 +1,14 @@
-function Movie({ movieData }) {
+function Movie({ bgImage, title, vote, overview }) {
   return (
     <div className="movie-container">
-      <img className="movie_img" src={movieData.backdrop_path} />
+      <img className="movie_img" src={bgImage} />
       <div className="movie_info">
-        <span>{movieData.title}</span>
-        <span>{movieData.vote_average}</span>
+        <span>{title}</span>
+        <span>{vote}</span>
+      </div>
+      <div className="detail-container">
+        <h5>{title}</h5>
+        <p>{overview}</p>
       </div>
     </div>
   );

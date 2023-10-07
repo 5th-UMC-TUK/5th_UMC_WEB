@@ -5,7 +5,15 @@ function App() {
   return (
     <div className="app-container">
       {movies.results.map((item) => {
-        return <Movie movieData={item} />;
+        return (
+          <Movie
+            key={item.id}
+            bgImage={item.backdrop_path}
+            title={item.title}
+            vote={item.vote_average}
+            overview={item.overview}
+          />
+        );
       })}
     </div>
   );
