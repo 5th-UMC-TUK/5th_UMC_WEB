@@ -28,5 +28,12 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "react/react-in-jsx-scope": 0, // "off" 대신 0 사용
+        "react/prop-types": 0 // "off" 대신 0 사용
+    },
+    "settings": {
+        "react": {
+            "version": "detect" // 자동으로 React 버전을 감지합니다.
+        }
     }
 }
