@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom';
 export default function Header() {
   return (
     <HeaderWrap>
-      <Logo />
+      <Link to="/">
+        <Logo />
+      </Link>
       <StyledLink to="/movie">영화</StyledLink>
       <StyledLink to="/tv">TV프로그램</StyledLink>
       <StyledLink to="/person">인물</StyledLink>
@@ -18,7 +20,7 @@ const Logo = styled.img.attrs({
   alt: '로고',
 })`
   margin-left: 200px;
-  height: 50%;
+  height: 20px;
 `;
 const HeaderWrap = styled.div`
   width: 100%;

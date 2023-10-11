@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Movie from '../Components/Movie/Movie';
+import Movie from '../components/Movie/Movie';
 import { movies } from '../movieDummy';
 
 function MoviePage() {
