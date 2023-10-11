@@ -17,5 +17,7 @@
     "react/react-in-jsx-scope": "off",
     "no-console": "warn",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    
+
   }
 }

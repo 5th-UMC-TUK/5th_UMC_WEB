@@ -1,45 +1,39 @@
-import styled from "styled-components";
-
-export const Circle = styled.div`
-  width: 5rem;
-  height: 5rem;
-  background: black;
-  border-radius: 50%;
-`;
+import styled from 'styled-components';
 
 export const TitleWrap = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, minmax(30px, auto));
+  grid-template-columns: repeat(3, minmax(10px, auto));
   grid-template-rows: repeat(3, 1fr);
-  width: 500px;
-  height: 150px;
+  width: 130px;
+  height: 40px;
   background-color: rgb(73, 58, 121);
 `;
 
 export const PosterImg = styled.img`
-  width: 500px;
-  height: 800px;
+  width: 130px;
+  height: 200px;
+  vertical-align: bottom;
 `;
 
 export const PosterTitle = styled.h1`
   grid-column: 1;
   grid-row: 2;
   margin: 0;
-  font-size: 40px;
+  font-size: 4px;
   color: #fff;
 `;
 
 export const Vote = styled.h3`
-  grid-column: 3;
+  grid-column: -1;
   grid-row: 2;
   margin: 0;
-  font-size: 30px;
+  font-size: 3px;
   color: #fff;
 `;
 
 export const OverviewTitle = styled.h3`
-  margin: 80px 40px 50px 40px;
-  font-size: 40px;
+  margin: 8px 4px 5px 4px;
+  font-size: 10px;
   font-weight: normal;
   color: rgba(255, 255, 255, 0.7);
 `;
@@ -51,6 +45,7 @@ export const OverviewContainer = styled.div`
   height: 100%;
   visibility: hidden;
   background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
 `;
 
 export const PosterContainer = styled.div`
@@ -62,7 +57,7 @@ export const PosterContainer = styled.div`
 
 export const Overview = styled.p`
   color: rgba(255, 255, 255, 0.7);
-  margin: 0 40px 0 40px;
-  font-size: 26px;
-  line-height: 40px;
+  margin: 0 4px 0 4px;
+  font-size: 2px;
+  line-height: 13px;
 `;
