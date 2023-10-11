@@ -1,10 +1,10 @@
-import * as S from "./Movie.style";
+import * as S from './Movie.style';
 
 function Movie({ poster, title, vote, overview }) {
   return (
-    <>
+    <div>
       <S.PosterContainer>
-        <S.PosterImg src={poster} alt={title}></S.PosterImg>
+        <S.PosterImg src={poster} alt={title} />
         <S.TitleWrap>
           <S.PosterTitle>{title}</S.PosterTitle>
           <S.Vote>{vote}</S.Vote>
@@ -14,7 +14,7 @@ function Movie({ poster, title, vote, overview }) {
           <S.Overview>{overview}</S.Overview>
         </S.OverviewContainer>
       </S.PosterContainer>
-    </>
+    </div>
   );
 }
 

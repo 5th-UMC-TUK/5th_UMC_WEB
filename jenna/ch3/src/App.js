@@ -1,21 +1,19 @@
-import Movie from "./Components/Movie/Movie";
-import { movies } from "./movieDummy";
-import styled from "styled-components";
+import styled from 'styled-components';
+import Movie from './Components/Movie/Movie';
+import { movies } from './movieDummy';
 
 function App() {
   return (
     <AppContainer>
-      {movies.results.map((item) => {
-        return (
-          <Movie
-            key={item.id}
-            poster={item.backdrop_path}
-            title={item.title}
-            vote={item.vote_average}
-            overview={item.overview}
-          />
-        );
-      })}
+      {movies.results.map((item) => (
+        <Movie
+          key={item.id}
+          poster={item.backdrop_path}
+          title={item.title}
+          vote={item.vote_average}
+          overview={item.overview}
+        />
+      ))}
     </AppContainer>
   );
 }
