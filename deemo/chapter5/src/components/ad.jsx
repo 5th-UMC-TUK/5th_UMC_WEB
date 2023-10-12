@@ -1,4 +1,4 @@
-import Advertisement from "../png/광고 이미지.jpeg"
+import Advertisement from "../png/logoimg.svg"
 import styled from "styled-components"
 import React from "react";
 
@@ -12,7 +12,7 @@ function Ad(){
 }
 
 const Advertis = styled.img`
-    width: 500px;
+    width: 100%;
 `;
 
 
