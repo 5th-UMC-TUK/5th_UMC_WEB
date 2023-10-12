@@ -1,6 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import LoginControl from './LoginControl';
 
 export default function Header() {
   return (
@@ -11,6 +11,7 @@ export default function Header() {
       <StyledLink to="/movie">영화</StyledLink>
       <StyledLink to="/tv">TV프로그램</StyledLink>
       <StyledLink to="/person">인물</StyledLink>
+      <LoginControl />
     </HeaderWrap>
   );
 }

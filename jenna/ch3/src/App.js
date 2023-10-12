@@ -3,7 +3,7 @@ import Home from './pages/HomePage';
 import Movie from './pages/MoviePage';
 import TV from './pages/TVPage';
 import Celebirity from './pages/CelebirityPage';
-import Header from './components/common/Header';
+import Header from './components/common/Header/Header';
 
 function App() {
   return (
