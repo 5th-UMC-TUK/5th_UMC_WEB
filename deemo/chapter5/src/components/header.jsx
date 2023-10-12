@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import React from "react";
 import styled from "styled-components";
 import logoImage from "../png/logo.png";
+import LoginControl from "./loginControl";
 
 function Header() {
   const nav = useNavigate();
@@ -12,6 +13,7 @@ function Header() {
         <Navstyle onClick={() => nav("/movies")}>영화</Navstyle>
         <Navstyle onClick={() => nav("/TV")}>TV프로그램</Navstyle>
         <Navstyle onClick={() => nav("/celebirity")}>인물</Navstyle>
+        <LoginControl/>
       </NavBox>
     </div>
   );
