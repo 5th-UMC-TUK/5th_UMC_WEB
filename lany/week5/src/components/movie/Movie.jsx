@@ -1,6 +1,6 @@
-import * as M from "./Movie.style";
+import * as M from './Movie.style';
 
-export default function Movie({ movieData }) {
+function Movie({ movieData }) {
   return (
     <M.MovieWrap>
       <M.MovieDetailWrap>
@@ -17,3 +17,5 @@ export default function Movie({ movieData }) {
     </M.MovieWrap>
   );
 }
+
+export default Movie;

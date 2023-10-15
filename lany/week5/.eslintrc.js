@@ -9,6 +9,11 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
+  parser: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  parser: 'babel-eslint',
   plugins: ['react'],
   rules: {},
 };
