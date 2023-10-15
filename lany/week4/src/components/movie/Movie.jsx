@@ -1,4 +1,5 @@
-import * as M from "./Movie.style";
+import React from 'react';
+import * as M from './Movie.style';
 
 export default function Movie({ movieData }) {
   return (

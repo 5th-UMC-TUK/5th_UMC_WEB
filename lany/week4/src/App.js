@@ -1,6 +1,7 @@
-import "./App.css";
-import Movie from "./components/movie/Movie";
-import { movies } from "./data/data";
+import React from 'react';
+import './App.css';
+import Movie from './components/movie/Movie';
+import { movies } from './data/data';
 
 function App() {
   const { results: movieDatas } = movies;
