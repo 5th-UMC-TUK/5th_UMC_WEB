@@ -1,9 +1,10 @@
-import * as S from "./Movie.style";
+import React from 'react';
+import * as S from './Movie.style';
 
 function Movie({ bgImage, title, vote, overview }) {
   return (
     <S.movieContainer>
-      <img className="movie_img" src={bgImage} />
+      <S.movieImg className="movie_img" src={bgImage} />
       <S.movieInfo>
         <span>{title}</span>
         <span>{vote}</span>

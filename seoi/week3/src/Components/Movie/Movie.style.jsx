@@ -1,4 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+
+export const movieImg = styled.img`
+  width: 200px;
+  height: 300px;
+`;
 
 export const movieInfo = styled.div`
   width: 200px;

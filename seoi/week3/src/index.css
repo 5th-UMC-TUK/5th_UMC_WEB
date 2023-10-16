@@ -1,20 +1,20 @@
-body {
+/* body {
   background-color: rgb(35, 37, 75);
-}
+} */
 
-.app-container {
+/* .app-container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 30px;
   place-items: center;
-}
+} */
 
-.movie_img {
+/* .movie_img {
   width: 200px;
   height: 300px;
-}
+} */
 
-.movie_info {
+/* .movie_info {
   width: 200px;
   height: 70px;
   background-color: #373b69;
@@ -24,13 +24,13 @@ body {
   align-items: center;
   padding: 0 10px;
   box-sizing: border-box;
-}
+} */
 
-.movie-container {
+/* .movie-container {
   position: relative;
-}
+} */
 
-.detail-container {
+/* .detail-container {
   visibility: hidden;
   color: rgb(179, 179, 179);
   background-color: rgba(0, 0, 0, 0.7);
@@ -39,19 +39,19 @@ body {
   height: 100%;
   padding: 0 10px;
   box-sizing: border-box;
-}
+} */
 
-.movie-container:hover .detail-container {
+/* .movie-container:hover .detail-container {
   visibility: visible;
-}
+} */
 
-.detail-container p {
+/* .detail-container p {
   font-size: 13px;
   line-height: 1.5;
   height: 80%;
   overflow-y: scroll;
-}
+} */
 
-.detail-container p::-webkit-scrollbar {
+/* .detail-container p::-webkit-scrollbar {
   display: none;
-}
+} */
