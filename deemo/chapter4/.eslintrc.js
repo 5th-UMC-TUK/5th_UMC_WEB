@@ -5,7 +5,9 @@ module.exports = {
     },
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "airbnb-base",
+        "prettier"
     ],
     "overrides": [
         {
@@ -21,19 +23,23 @@ module.exports = {
         }
     ],
     "parserOptions": {
-        "ecmaVersion": "latest",
+        "ecmaVersion": 2021,
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "prettier"
     ],
     "rules": {
-        "react/react-in-jsx-scope": 0, // "off" 대신 0 사용
-        "react/prop-types": 0 // "off" 대신 0 사용
+        "react/react-in-jsx-scope": 0,
+        "react/prop-types": 0,
+        "prettier/prettier": "error",
+        "arrow-body-style": "off",
+        "prefer-arrow-callback": "off"
     },
     "settings": {
         "react": {
-            "version": "detect" // 자동으로 React 버전을 감지합니다.
+            "version": "detect"
         }
     }
 }
