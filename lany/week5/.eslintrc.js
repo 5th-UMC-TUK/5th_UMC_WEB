@@ -3,17 +3,20 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['airbnb-base', 'prettier'],
+  extends: ['airbnb-base', 'plugin:react/recommended', 'prettier'],
   overrides: [],
   parserOptions: {
+    parser: 'babel-eslint',
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  parser: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-  },
-  parser: 'babel-eslint',
   plugins: ['react'],
-  rules: {},
+  rules: { 'react/prop-types': 'off' },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
 };

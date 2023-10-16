@@ -1,16 +1,21 @@
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Movie from './components/movie/Movie';
-import { movies } from './data/data';
+import Movies from './components/movie/Movies';
+import Home from './components/home/Home';
+import Celebrity from './components/celebrity/Celebrity';
+import TV from './components/tv/TV';
+import NotFound from './components/NotFound';
 
 function App() {
-  const { results: movieDatas } = movies;
-
   return (
-    <div className="container">
-      {movieDatas.map((movieData, idx) => (
-        <Movie movieData={movieData} key={`${movieData.title} ${idx}`} />
-      ))}
-    </div>
+    <Routes>
+      <Route exact path="/" element={<Home />} />
+      <Route path="/person" element={<Celebrity />} />
+      <Route path="/tv" element={<TV />} />
+      <Route path="/movie" element={<Movies />} />
+      <Route path="/*" element={<NotFound />} />
+    </Routes>
   );
 }
 

@@ -1,3 +1,11 @@
 body {
-  background-color: rgb(35, 37, 72);
+  margin: 0;
+  padding: 0;
+}
+
+.w::after {
+  content: 'gd';
+  border: 1px solid white;
+  border-radius: 50%;
+  background-color: white;
 }
