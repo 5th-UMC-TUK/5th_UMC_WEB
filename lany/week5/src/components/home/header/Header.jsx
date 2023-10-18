@@ -1,5 +1,6 @@
 import React from 'react';
-import * as H from '../style/header.style';
+import * as H from '../../../style/home/header/header.style';
+import LoginControl from './LoginControl';
 
 export default function Header() {
   return (
@@ -11,6 +12,7 @@ export default function Header() {
       <H.PageLink to="/movie">영화</H.PageLink>
       <H.PageLink to="/tv">TV프로그램</H.PageLink>
       <H.PageLink to="/person">인물</H.PageLink>
+      <LoginControl />
     </H.Container>
   );
 }
