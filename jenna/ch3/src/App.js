@@ -4,6 +4,7 @@ import Movie from './pages/MoviePage';
 import TV from './pages/TVPage';
 import Celebirity from './pages/CelebirityPage';
 import Header from './components/common/Header/Header';
+import MovieDetail from './components/Movie/MovieDetail';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/tv" element={<TV />} />
         <Route path="/person" element={<Celebirity />} />
         <Route path="/movie" element={<Movie />} />
+        <Route path="/movie/:title" element={<MovieDetail />} />
       </Routes>
     </BrowserRouter>
   );

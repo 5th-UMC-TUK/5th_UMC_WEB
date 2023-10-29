@@ -1,9 +1,16 @@
+import { useNavigate } from 'react-router-dom';
 import * as S from './Movie.style';
 
 function Movie({ poster, title, vote, overview }) {
+  const navigate = useNavigate();
+
+  const onClickPoster = () => {
+    navigate(`/movie/${title}`, { state: { poster, title, vote, overview } });
+  };
+
   return (
     <div>
-      <S.PosterContainer>
+      <S.PosterContainer onClick={onClickPoster}>
         <S.PosterImg src={poster} alt={title} />
         <S.TitleWrap>
           <S.PosterTitle>{title}</S.PosterTitle>
