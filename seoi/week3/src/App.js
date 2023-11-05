@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import Header from './Components/Header';
+import Header from './Components/Header/Header';
 import Home from './pages/Home';
 import Celebrity from './pages/Celebrity';
 import TV from './pages/TV';
