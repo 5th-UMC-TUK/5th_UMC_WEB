@@ -28,7 +28,7 @@ export default function Login() {
         <label htmlFor="email">이메일 주소</label>
         <br />
         <I.Input type="email" id="email" value={email} onChange={userInput} onBlur={checkEmailValid} />
-        {!emailValid && <p>올바른 이메일을 입력해 주세요.</p>}
+        {!emailValid && <I.Warning>올바른 이메일을 입력해 주세요.</I.Warning>}
       </I.InputWrap>
       <I.InputWrap>
         <label htmlFor="password">비밀번호</label>

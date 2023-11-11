@@ -16,6 +16,10 @@ export const Input = styled.input`
   width: 100%;
 `;
 
+export const Warning = styled.p`
+  color: red;
+`;
+
 export const Button = styled.button`
   background-color: ${(props) => (props.checkvalid === "valid" ? "rgb(3, 38, 64)" : "rgb(218, 218, 218)")};
   color: #ffffff;
