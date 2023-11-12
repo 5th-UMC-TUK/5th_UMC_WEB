@@ -6,6 +6,8 @@ function DetailPage() {
   const { state } = useLocation();
   console.log(titleText);
   console.log(state);
+
+  
   return (
     <div>
       <ImgBox src={state.img} />
