@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+}
+
+.container {
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.container li {
+    position: relative;
+}
+
+.container .movieExplanation {
+    width: 300px;
+    height: 500px;
+}
+
+.container .movieExplanation {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.container li:hover .movieExplanation {
+    display: block;
+}
