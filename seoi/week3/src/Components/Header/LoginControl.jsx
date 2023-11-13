@@ -1,19 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 function LoginControl() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const navigate = useNavigate();
 
-  const handleLoginBtnClcik = () => {
-    setIsLoggedIn(!isLoggedIn);
+  // const handleLoginBtnClcik = () => {
+  //   setIsLoggedIn(!isLoggedIn);
+  // };
+
+  const moveLoginPage = () => {
+    navigate('/login');
   };
 
   return (
     <>
-      <LoginBtn onClick={handleLoginBtnClcik}>
+      {/* <LoginBtn onClick={handleLoginBtnClcik}>
         {isLoggedIn ? '로그아웃' : '로그인'}
-      </LoginBtn>
-      <LoginText>{isLoggedIn ? '환영합니다!' : '로그인 해주세요!'}</LoginText>
+      </LoginBtn> */}
+      <LoginBtn onClick={moveLoginPage}>로그인</LoginBtn>
+      {/* <LoginText>{isLoggedIn ? '환영합니다!' : '로그인 해주세요!'}</LoginText> */}
     </>
   );
 }
@@ -28,7 +35,7 @@ const LoginBtn = styled.button`
   height: 25px;
 `;
 
-const LoginText = styled.p`
-  color: white;
-  margin-left: 10px;
-`;
+// const LoginText = styled.p`
+//   color: white;
+//   margin-left: 10px;
+// `;
