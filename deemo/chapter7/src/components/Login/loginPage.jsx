@@ -24,9 +24,10 @@ export function LoginPage(){
             </l.InputText>
             <l.InputBox
                 type="email"
+                name="email"
                 value={formData.email}
                 onChange={handleChange}
-
+                required
             >
             </l.InputBox>
             <l.InputText>
@@ -34,14 +35,13 @@ export function LoginPage(){
             </l.InputText>
             <l.InputBox
                 type="password"
+                name="password"
                 value={formData.password}
                 onChange={handleChange}
-
+                required
             >
             </l.InputBox>
         <l.SumitBtn>확인</l.SumitBtn>
-
-
         </l.Container>
     )
 }
