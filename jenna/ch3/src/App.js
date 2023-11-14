@@ -6,6 +6,7 @@ import Celebirity from './pages/CelebirityPage';
 import Header from './components/common/Header/Header';
 import MovieDetail from './components/Movie/MovieDetail';
 import NotFound from './pages/NotFoundPage';
+import Login from './pages/LoginPage';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/movie" element={<Movie />} />
         <Route path="/movie/:title" element={<MovieDetail />} />
         <Route path="/*" element={<NotFound />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );

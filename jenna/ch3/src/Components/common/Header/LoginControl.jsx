@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 function LoginControl() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -9,9 +10,11 @@ function LoginControl() {
   };
   return (
     <LoginWrap>
-      <LoginBtn type="button" onClick={handleLoginClick}>
-        {isLoggedIn ? '로그인' : '로그아웃'}
-      </LoginBtn>
+      <Link to="/login">
+        <LoginBtn type="button" onClick={handleLoginClick}>
+          {isLoggedIn ? '로그인' : '로그아웃'}
+        </LoginBtn>
+      </Link>
       <Greeting>{isLoggedIn ? '환영합니다' : '로그인 해주세요!!!'}</Greeting>
     </LoginWrap>
   );
