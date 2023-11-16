@@ -26,38 +26,40 @@ export default function LoginPage() {
   };
 
   return (
-    <div>
-      <h1>이메일과 비밀번호를 입력해주세요</h1>
-      <form>
-        <label htmlFor="email">
+    <S.Wrap>
+      <S.Title>이메일과 비밀번호를 입력해주세요</S.Title>
+      <S.LoginForm>
+        <S.InputLabel htmlFor="email">
           이메일 주소
-          <input
+          <S.LoginInput
             name="email"
             type="text"
             value={email}
             onChange={handleInputChange}
           />
-        </label>
-        {!emailCheck && <p>올바른 이메일을 입력해주세요.</p>}
+        </S.InputLabel>
+        {!emailCheck && (
+          <S.EmailCheck>올바른 이메일을 입력해주세요.</S.EmailCheck>
+        )}
 
         <br />
-        <label htmlFor="password">
+        <S.InputLabel htmlFor="password">
           비밀번호
-          <input
+          <S.LoginInput
             name="password"
             type="password"
             value={password}
             onChange={handleInputChange}
             placeholder="영문,숫자, 특수문자 포함 8자 이상"
           />
-        </label>
+        </S.InputLabel>
         <S.SubmitBtn
           type="button"
           disabled={!(emailCheck && email !== '' && password !== '')}
         >
           확인
         </S.SubmitBtn>
-      </form>
-    </div>
+      </S.LoginForm>
+    </S.Wrap>
   );
 }
