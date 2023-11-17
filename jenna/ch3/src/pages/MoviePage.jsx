@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Movie from '../components/Movie/Movie';
-import { movies } from '../movieDummy';
+import { movies } from '../data/movieDummy';
 
 function MoviePage() {
   return (
