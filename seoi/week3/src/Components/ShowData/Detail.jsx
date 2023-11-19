@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 
-function MovieDetail() {
+function Detail() {
   const title = useParams();
   const { state } = useLocation();
 
@@ -17,4 +17,4 @@ function MovieDetail() {
   );
 }
 
-export default MovieDetail;
+export default Detail;
