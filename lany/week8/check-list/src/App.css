@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#weather-wrap {
+  margin-top: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  margin: 0;
+}
+
+span {
+  align-self: flex-end;
+}
