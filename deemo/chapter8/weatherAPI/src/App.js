@@ -24,12 +24,12 @@ function App() {
     setCity(e.target.value);
   }
   return (
-    <div>
+    <div className="container">
       <input value={city} placeholder="도시를 입력하세요" onChange={inputData} />
       {weatherData && (
-        <div>
+        <div className="data-container">
           <h2>{weatherData.name}</h2>
-          <p>{Math.round(((weatherData.main.temp - 273.15) * 10)) / 10}°C</p>
+          <h3>{Math.round(((weatherData.main.temp - 273.15) * 10)) / 10}°C</h3>
           <p>{weatherData.weather[0].main}</p>
         </div>
       )}

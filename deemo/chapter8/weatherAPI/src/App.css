@@ -4,5 +4,46 @@
     margin: 0;
 }
 
-body {
+
+.container{
+    display: flex;
+    margin-top: 200px;
+    align-items: center;
+    flex-direction: column;
+}
+.container input{
+    width: 300px;
+    height: 60px;
+    font-size: 26px;
+    padding: 16px;
+    border: 2px solid;
+    border-radius: 25px;
+}
+.data-container{
+    margin-top: 32px;
+    border: 2px solid;
+    padding: 16px;
+    border-radius: 15px;
+    width: 300px;
+    height: 250px;
+    position: relative;
+}
+
+h2{
+    position: absolute;
+    left: 32px;
+    font-size: 32px;
+}
+h3{
+    position: absolute;
+    top: 100px;
+    left: 32px;
+    font-size: 60px;
+}
+
+p{
+    position: absolute;
+    bottom: 16px;
+    right: 12px;
+    font-size: 24px;
 }
