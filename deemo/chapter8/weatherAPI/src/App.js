@@ -4,9 +4,10 @@ import axios from "axios";
 
 
 function App() {
+  const API_KEY = process.env.REACT_APP_API_KEY;
   const [city, setCity] = useState('')
   const [weatherData, setWeatherData] = useState(null);
-  const API_KEY = '57c783a2fc90cf023ab5e32ac4d580e8'
+  
   useEffect(() => {
     if (city) {
       axios
