@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
+import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { set } from '../../reducers/userInfo';
 
 function Login() {
-  const [email, setEmail] = useState('');
+  const [id, setId] = useState('');
   const [password, setPassword] = useState('');
-  const [emailValid, setEmailValid] = useState(true);
+  const [isConnect, setIsConnect] = useState(false);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const handleEmailChange = (e) => {
-    const emailValue = e.target.value;
-    setEmail(emailValue);
+  const handleIdChange = (e) => {
+    const idValue = e.target.value;
+    setId(idValue);
   };
 
   const handlePasswordChange = (e) => {
@@ -16,14 +22,26 @@ function Login() {
     setPassword(passwordValue);
   };
 
-  const checkEmail = () => {
-    const emailRegEx =
-      /^[A-Za-z0-9]([-_.]?[A-Za-z0-9])*@[A-Za-z0-9]([-_.]?[A-Za-z0-9])*\.[A-Za-z]{2,3}$/;
-    setEmailValid(emailRegEx.test(email));
-  };
-
-  const checkAll = () => {
-    return !!email && !!password && emailValid;
+  const onLogin = () => {
+    if (!id || !password) {
+      alert('아이디와 비밀번호를 확인해주세요.');
+      return;
+    }
+    setIsConnect(true);
+    const userInfo = { id: id, pw: password };
+    axios
+      .post('http://localhost:8000/user/login', userInfo)
+      .then((res) => {
+        console.log(res);
+        dispatch(set(res.data.result.AccessToken));
+        setTimeout(() => {
+          setIsConnect(false);
+          navigate('/');
+        }, 1500);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
@@ -31,16 +49,10 @@ function Login() {
       <h2>이메일과 비밀번호를 입력해주세요</h2>
       <InputWrap>
         <label>
-          이메일 주소
+          아이디
           <br />
-          <Input
-            type="email"
-            value={email}
-            onChange={handleEmailChange}
-            onBlur={checkEmail}
-          />
+          <Input type="text" value={id} onChange={handleIdChange} />
         </label>
-        {!emailValid && <WarningP>올바른 이메일을 입력해주세요.</WarningP>}
       </InputWrap>
       <InputWrap>
         <label>
@@ -53,12 +65,8 @@ function Login() {
           />
         </label>
       </InputWrap>
-      <LoginBtn
-        onClick={() => alert('로그인 성공!')}
-        disabled={!checkAll()}
-        checkInput={checkAll() ? 'done' : 'fail'}
-      >
-        확인
+      <LoginBtn onClick={onLogin} disabled={isConnect}>
+        {isConnect ? 'Loading...' : '확인'}
       </LoginBtn>
     </LoginContainer>
   );
@@ -89,13 +97,6 @@ const LoginBtn = styled.button`
   border: none;
   color: white;
   margin-top: 20px;
-  background-color: ${(props) =>
-    props.checkInput === 'done' ? '#032642' : 'rgb(210, 208, 208)'};
-  cursor: ${(props) =>
-    props.checkInput === 'done' ? 'pointer' : 'not-allowed'};
-`;
-
-const WarningP = styled.p`
-  color: red;
-  font-size: 13px;
+  background-color: #032642;
+  cursor: pointer;
 `;
