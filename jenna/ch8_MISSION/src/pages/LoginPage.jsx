@@ -19,8 +19,10 @@ export default function LoginPage() {
         id: id,
         pw: password,
       });
-      console.log(response);
+
       dispatch(loginUser({ id, password }));
+      localStorage.setItem('token', response.data.result.AccessToken);
+      localStorage.setItem('Id', response.data.result.userId);
     } catch (e) {
       console.error(e);
       alert('아이디와 비밀번호를 확인해주세요');
