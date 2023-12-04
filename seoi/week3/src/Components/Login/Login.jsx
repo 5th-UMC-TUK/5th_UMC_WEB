@@ -32,8 +32,9 @@ function Login() {
     axios
       .post('http://localhost:8000/user/login', userInfo)
       .then((res) => {
-        console.log(res);
         dispatch(set(res.data.result.AccessToken));
+        localStorage.setItem('token', res.data.result.AccessToken);
+        localStorage.setItem('id', res.data.result.userId);
         setTimeout(() => {
           setIsConnect(false);
           navigate('/');
